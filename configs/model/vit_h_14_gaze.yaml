@@ -1,0 +1,19 @@
+
+
+# net_config:
+#   type: models.vit.vit_gaze.CustomViT_H14
+#   params: 
+#     imagenet_pretrained_path: checkpoints/vit_pretrain/vit_h_14_swag-80465313.pth
+    
+    
+
+
+net_config:
+  type: models.vit.vit_gaze.CustomViT_H14
+  params: 
+    global_pool: False
+    drop_path_rate: 0.1
+    custom_pretrained_path: checkpoints/vit_pretrain/timm_vit_h_14_imagenet21k.bin
+
+
+

@@ -1,0 +1,24 @@
+type: datasets.mpiigaze.MPIIGazeDataset
+params:
+  data_name: our_mpii
+  color_type: bgr
+  transform_type: 'basic_imagenet'
+  dataset_path: null
+  image_size: 224
+  keys_to_use: 
+    - p00.h5
+    - p01.h5
+    - p02.h5
+    - p03.h5
+    - p04.h5
+    - p05.h5
+    - p06.h5
+    - p07.h5
+    - p08.h5
+    - p09.h5
+    # - p10.h5
+    # - p11.h5
+    # - p12.h5
+    # - p13.h5
+    # - p14.h5
+

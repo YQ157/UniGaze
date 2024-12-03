@@ -1,0 +1,74 @@
+
+
+
+type: datasets.gaze360.Gaze360Dataset
+params:
+  data_name: gaze360_224_test
+  saved_norm_config:
+    focal_norm: 960
+    distance_norm: 600
+    roi_size: [224, 224]
+  norm_config:
+      focal_norm: 960
+      distance_norm: 600
+      roi_size: [224, 224]
+      
+  color_type: bgr
+  transform_type: 'basic_imagenet'
+  dataset_path: null
+  image_size: 224
+  sample_rate_use: 1
+  whether_crop_resize: False
+  keys_to_use:
+    - 000000.h5
+    - 000001.h5
+    - 000002.h5
+    - 000003.h5
+    - 000004.h5
+    - 000010.h5
+    - 000014.h5
+    - 000022.h5
+    - 000031.h5
+    - 000032.h5
+    - 000044.h5
+    - 000045.h5
+    - 000057.h5
+    - 000058.h5
+    - 000070.h5
+    - 000078.h5
+    - 000270.h5
+    - 000277.h5
+    - 000278.h5
+    - 000279.h5
+    - 000316.h5
+    - 000364.h5
+    - 000367.h5
+    - 000511.h5
+    - 000512.h5
+    - 000513.h5
+    - 000515.h5
+    - 000527.h5
+    - 000536.h5
+    - 000543.h5
+    - 000579.h5
+    - 000584.h5
+    - 000585.h5
+    - 000600.h5
+    - 000603.h5
+    - 000604.h5
+    - 000611.h5
+    - 000614.h5
+    - 000615.h5
+    - 000616.h5
+    - 000649.h5
+    - 000650.h5
+    - 000651.h5
+    - 000652.h5
+    - 000687.h5
+    - 000723.h5
+    - 000777.h5
+    - 000782.h5
+    - 000823.h5
+    - 000907.h5
+    - 000909.h5
+    - 000982.h5

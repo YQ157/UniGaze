@@ -1,0 +1,13 @@
+
+
+
+
+net_config:
+  type: models.vit.mae_gaze.MAE_Gaze
+  params: 
+    model_type: 'vit_l_16'
+    global_pool: False
+    drop_path_rate: 0.1
+    custom_pretrained_path: checkpoints/vit_pretrain/face_mae_1021/checkpoint-299.pth
+
+

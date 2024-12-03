@@ -1,0 +1,5 @@
+
+net_config:
+  type: models.hybrid_tr.HybridTR50
+  
+

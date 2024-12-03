@@ -1,0 +1,4 @@
+loss_config:
+  type: criteria.gaze_loss.PitchYawLoss
+  params:
+    loss_type: 'l1'

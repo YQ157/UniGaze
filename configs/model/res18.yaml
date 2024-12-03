@@ -1,0 +1,5 @@
+
+net_config:
+  type: models.resnet.Res18
+  
+

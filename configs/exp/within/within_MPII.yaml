@@ -1,0 +1,10 @@
+train: 
+  - configs/data/entry/mpiigaze_train.yaml
+
+val: 
+  - configs/data/entry/mpiigaze_test.yaml
+  
+  - configs/data/entry/our_mpii_test.yaml
+
+
+

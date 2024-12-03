@@ -1,0 +1,11 @@
+
+
+net_config:
+  type: models.vit.vit_gaze.ViTGaze
+  params: 
+    vit_type: 'l_16'
+
+
+
+
+

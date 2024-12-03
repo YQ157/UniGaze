@@ -1,0 +1,14 @@
+
+
+train: configs/data/entry/eyediap_cs.yaml
+
+train_2: configs/data/entry/eyediap_ft.yaml
+
+val: configs/data/entry/xgaze_70_80sub.yaml
+
+
+test: configs/data/entry/mpiigaze.yaml
+
+test_2: configs/data/entry/gazecapture_test.yaml
+
+

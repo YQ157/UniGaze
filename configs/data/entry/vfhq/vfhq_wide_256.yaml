@@ -1,0 +1,31 @@
+
+
+
+type: datasets.vfhq.VFHQDatasetAugmentation
+params:
+  data_name: vfhq_wide_256
+
+  saved_norm_config:
+    focal_norm: 750
+    distance_norm: 600
+    roi_size: [256, 256]
+  norm_config:
+      focal_norm: 960
+      distance_norm: 600
+      roi_size: [224, 224]
+      
+  color_type: bgr
+  transform_type: 'basic_imagenet'
+  dataset_path: null
+  image_size: 224
+
+  # augment_types:
+  #   - plane_rotate: 30
+
+  keys_to_use: 
+    - part1.h5
+    - part2.h5
+    - part3.h5
+    - part4.h5
+    - part5.h5
+    - part6.h5

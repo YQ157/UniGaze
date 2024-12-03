@@ -1,0 +1,40 @@
+defaults:
+  - _self_
+  - exp: exp_224
+  
+
+
+mode: train
+random_seed: 42
+num_workers: 20
+
+
+test_per_epoch: 1
+print_freq: 100
+data_sanity_check: false
+log_wandb: false
+output_dir: "./logs"
+ckpt_resume: null
+pretrain_ckptpath: null
+
+
+optimizer_cfg: null
+scheduler_cfg: null
+
+batch_size: 50
+unsup_batch_size: 100
+test_batch_size: 200
+
+epochs: 25
+valid_epoch: 1
+eval_epoch: 10
+save_epoch: 10
+
+iteration_based_on: train_loader
+
+use_autocast: False
+
+batchnorm_type:
+  label: clean
+  unlabel: aug
+  test: clean

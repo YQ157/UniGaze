@@ -1,0 +1,22 @@
+type: datasets.eyediap.EYEDIAPDataset
+params:
+  data_name: eyediap_cs
+  color_type: bgr
+  transform_type: 'basic_imagenet'
+  image_size: 224
+  dataset_path: null
+  keys_to_use: 
+    # - 'person_1.h5'
+    # - 'person_2.h5'
+    # - 'person_3.h5'
+    # - 'person_4.h5'
+    # - 'person_5.h5'
+    # - 'person_6.h5'
+    # - 'person_7.h5'
+    # - 'person_8.h5'
+    - 'person_9.h5'
+    - 'person_10.h5'
+    - 'person_11.h5' 
+    - 'person_14.h5'
+    - 'person_15.h5'
+    - 'person_16.h5'

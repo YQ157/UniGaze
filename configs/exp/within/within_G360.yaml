@@ -1,0 +1,9 @@
+
+train: 
+  - configs/data/entry/gaze360_train.yaml
+  
+val:
+  - configs/data/entry/gaze360_test.yaml
+
+
+
