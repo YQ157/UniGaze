@@ -10,11 +10,13 @@ please install the required packages by pip install -r requirements
 
 ## Overview
 - this repo contains the [MAE](https://github.com/facebookresearch/mae) pre-training and gaze estimation training.
-- milestone
-    - provide the pre-trained MAE checkpoints and gaze estimation code
-    - provide a SOTA gaze estimation model (trained by joint-dataset) for inference 
-    - provide a gaze estimation demo code
-    - provide the MAE pre-training code
+### Milestones:
+- :white_check_mark: Release pre-trained MAE checkpoints (B, L, H) and gaze estimation training code.
+- [ ] Release UniGaze models trained on the *joint dataset* for inference.
+- [ ] Release inference code or gaze estimation demo.
+- [ ] Release the MAE pre-training code.
+
+
 
 ## Pre-training (MAE)
 (skip for now)
@@ -33,11 +35,6 @@ pip install -r requirements.txt
 ## Overview
 This repository contains code for both **MAE pre-training** and **gaze estimation training**.
 
-### Milestones:
-:white_check_mark: Release pre-trained MAE checkpoints (B, L, H) and gaze estimation training code.
-- [ ] Release UniGaze models trained on the *joint dataset* for inference.
-- [ ] Release inference code or gaze estimation demo.
-- [ ] Release the MAE pre-training code.
 
 ---
 
