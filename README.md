@@ -64,7 +64,7 @@ pip install -r requirements.txt
 
 
 ## Training (Gaze Estimation)
-Refer to [Gaze estimation training.md](./gaze_estimation/README.md)
+Refer to [Gaze estimation training.md](./unigaze/README.md)
 
 
 ## Inference
@@ -83,7 +83,7 @@ Refer to [Gaze estimation training.md](./gaze_estimation/README.md)
 
 
 ```bash
-projdir=<...>/UniGaze/gaze_estimation
+projdir=<...>/UniGaze/unigaze
 cd ${projdir}
 model=configs/model/mae_b_16_gaze.yaml 
 ckpt_resume=<path to the trained gaze estimator checkpoint>

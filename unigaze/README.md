@@ -13,7 +13,7 @@
 
 Put them in this structure (refer to their yaml config file)
 ```
-UniGaze/gaze_estimation
+UniGaze/unigaze
     ├── checkpoints/
         ├── mae_b16/
         │   ├── mae_b16_checkpoint-299.pth
@@ -30,7 +30,7 @@ UniGaze/gaze_estimation
 ### Create a `data_path.yaml`
 This file is ignored so you have to create your own
 ```
-UniGaze/gaze_estimation
+UniGaze/unigaze
     ├── configs/
         ├── data_path.yaml
         ├── <others>
@@ -72,7 +72,7 @@ You can create your own train-test settings in a similar way:
 Create a `run.sh` file like below and `sh run.sh`
 
 ```bash
-projdir=<...>/UniGaze/gaze_estimation
+projdir=<...>/UniGaze/unigaze
 cd ${projdir}
 OUTPUT_DIR=${projdir}/logs
 
