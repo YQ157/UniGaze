@@ -8,7 +8,6 @@ import torch.utils.model_zoo as model_zoo
 from torch.utils.model_zoo import load_url as load_state_dict_from_url
 from functools import partial
 from torchvision.models import vit_b_16, vit_b_32, vit_l_16, vit_l_32
-from gazelib.utils.color_text import print_green, print_cyan
 
 
 
@@ -85,7 +84,7 @@ class CustomViT_H14(nn.Module):
 			interpolate_pos_embed(self.vit, checkpoint_model)
 		
 			self.vit.load_state_dict( checkpoint_model, strict=False )
-			print_green('Loaded custom pretrained weights from {}'.format(custom_pretrained_path))
+			print('Loaded custom pretrained weights from {}'.format(custom_pretrained_path))
 
 		embed_dim = self.vit.embed_dim
 		self.gaze_fc = nn.Linear(embed_dim, 2)

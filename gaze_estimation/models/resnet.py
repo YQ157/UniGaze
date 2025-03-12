@@ -1,12 +1,7 @@
-import numpy as np
 import torch
 import torch.nn as nn
 from torch.utils.model_zoo import load_url as load_state_dict_from_url
-from gazelib.utils.color_text import print_green, print_cyan
-
 import torch.nn.functional as F
-
-from utils.image_augmentation import project_pitchyaw_to_image_plane, vector2d_to_angle
 
 
 model_urls = {
@@ -282,45 +277,14 @@ class ResNet(nn.Module):
 
 		return x
 	
-	def forward_layers(self, x):
-		outputs = {}
-		x = self.conv1(x)
-		x = self.bn1(x)
-		x = self.relu(x)
-		x = self.maxpool(x)
-
-		x = self.layer1(x)
-		outputs['layer1'] = x
-		x = self.layer2(x)
-		outputs['layer2'] = x
-		x = self.layer3(x)
-		outputs['layer3'] = x
-		x = self.layer4(x) # (224,224) --> (7,7)
-		outputs['layer4'] = x
-
-		return outputs
 
 def _resnet(arch, block, layers, pretrained, progress, **kwargs):
 	model = ResNet(block, layers, **kwargs)
 	if pretrained:
 		state_dict = load_state_dict_from_url(model_urls[arch],
 											  progress=progress)
-		current_state_dict = model.state_dict()
 
-		bn_keys = [k for k in state_dict.keys() if 'bn' in k and 'aux' not in k]
-		print('bn_keys: ', bn_keys)
-		aux_bn_keys = [k for k in current_state_dict.keys() if 'aux_bn' in k and 'num_batches_tracked' not in k]
-		print('aux_bn_keys: ', aux_bn_keys)
-		if len(aux_bn_keys) > 0:
-			for k in aux_bn_keys:
-				corresponding_bn_k = k.replace('.aux_bn', '')
-				print_cyan(' inside state_dict: copy the bn {} to {} '.format(corresponding_bn_k, k))
-				state_dict[k] = state_dict[corresponding_bn_k]
-			
-			model.load_state_dict(state_dict)
-				
-		else:
-			model.load_state_dict(state_dict)
+		model.load_state_dict(state_dict)
 	return model
 
 def resnet18(pretrained=False, progress=True, **kwargs):
@@ -368,77 +332,35 @@ class ResNetGaze(nn.Module):
 	def __init__(self):
 		raise NotImplementedError
 		
-	def encode_to_z(self, x_in, normalize_z=False):
+	def forward(self, x_in):
 		output_dict = {}
 		features = self.feature(x_in)
 		z = self.avgpool(features)
 		z = z.view(z.size(0), -1) ## (batch, dim)
-		if normalize_z:
-			z = F.normalize(z, p=2, dim=1)
-		output_dict['z'] = z
+		pred_gaze = self.fc(z)
+		output_dict['pred_gaze'] = pred_gaze
 		return output_dict
-
-	def predict(self, output_dict):
-		z = output_dict['z']
-		if self.estimate_head:
-			pred = self.fc(z)
-			pred_gaze = pred[:,:2]
-			pred_head = pred[:,2:]
-			output_dict['pred_gaze'] = pred_gaze
-			output_dict['pred_head'] = pred_head
-		else:
-			pred_gaze = self.fc(z)
-			output_dict['pred_gaze'] = pred_gaze
-		
-		pred_xy = project_pitchyaw_to_image_plane(pred_gaze)
-		pred_xy = vector2d_to_angle(pred_xy)
-		output_dict['pred_xy'] = pred_xy
-		return output_dict
-
-		
-	def forward(self, x_in, normalize_z=False):
-		out_dict = self.encode_to_z(x_in, normalize_z=normalize_z)
-		out_dict = self.predict(out_dict)
-		return out_dict
 
 class Res18(ResNetGaze, nn.Module):
-	def __init__(self, estimate_head=False, resnet_pretrained=True):
+	def __init__(self,  resnet_pretrained=True):
 		nn.Module.__init__(self)
-		self.estimate_head = estimate_head
-		print_cyan('estimate_head: ', self.estimate_head)
 		self.feature = resnet18(pretrained=resnet_pretrained)
-		# self.feature.fc = nn.Identity()
 		self.avgpool = nn.AdaptiveAvgPool2d((1,1))
 
-		if self.estimate_head:
-			self.fc = nn.Linear(512, 4)
-		else:
-			self.fc = nn.Linear(512, 2)
+		self.fc = nn.Linear(512, 2)
 		
 
 class Res50(ResNetGaze, nn.Module):
-	def __init__(self, estimate_head=False, resnet_pretrained=True):
+	def __init__(self, resnet_pretrained=True):
 		nn.Module.__init__(self)
-		self.estimate_head = estimate_head
-		print_cyan('estimate_head: ', self.estimate_head)
 		self.feature = resnet50(pretrained=resnet_pretrained)
-		# self.feature.fc = nn.Identity()
 		self.avgpool = nn.AdaptiveAvgPool2d((1,1))
-		if self.estimate_head:
-			self.fc = nn.Linear(2048, 4)
-		else:
-			self.fc = nn.Linear(2048, 2)
+		self.fc = nn.Linear(2048, 2)
 			
 		
 class Res152(ResNetGaze, nn.Module):
-	def __init__(self, estimate_head=False, resnet_pretrained=True):
+	def __init__(self, resnet_pretrained=True):
 		nn.Module.__init__(self)
-		self.estimate_head = estimate_head
-		print_cyan('estimate_head: ', self.estimate_head)
 		self.feature = resnet152(pretrained=resnet_pretrained)
-		# self.feature.fc = nn.Identity()
 		self.avgpool = nn.AdaptiveAvgPool2d((1,1))
-		if self.estimate_head:
-			self.fc = nn.Linear(2048, 4)
-		else:
-			self.fc = nn.Linear(2048, 2)
+		self.fc = nn.Linear(2048, 2)

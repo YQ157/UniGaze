@@ -2,19 +2,7 @@ import torch
 import torch.nn as nn
 
 
-# from gazelib.gaze.gaze_utils import pitchyaw_to_vector, vector_to_pitchyaw
-# def nn_angular_distance(a, b):
-# 	sim = F.cosine_similarity(a, b, eps=1e-6)
-# 	sim = F.hardtanh(sim, -1.0, 1.0)
-# 	return torch.acos(sim) * (180 / np.pi)
 
-
-# def gaze_angular_loss( y, y_hat):
-# 	y = pitchyaw_to_vector(y)
-# 	y_hat = pitchyaw_to_vector(y_hat)
-# 	loss = nn_angular_distance(y, y_hat)
-# 	return torch.mean(loss)
-	
 
 class PitchYawLoss(nn.Module):
 	def __init__(self, loss_type='l1', epsilon=None):

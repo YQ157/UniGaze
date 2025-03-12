@@ -8,4 +8,4 @@ net_config:
     model_type: 'vit_b_16'
     global_pool: False
     drop_path_rate: 0.1
-    custom_pretrained_path: checkpoints/vit_pretrain/face_mae_1024_vit_base_16/300epochs/checkpoint-299.pth
+    custom_pretrained_path: checkpoints/mae_b16/mae_b16_checkpoint-299.pth

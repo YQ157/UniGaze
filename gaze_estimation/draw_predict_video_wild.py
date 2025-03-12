@@ -33,7 +33,7 @@ import face_alignment
 
 from gazelib.gaze.gaze_utils import pitchyaw_to_vector, vector_to_pitchyaw, angular_error
 from gazelib.gaze.normalize import estimateHeadPose, normalize
-from gazelib.label_transform import get_eye_nose_landmarks, get_eye_mouth_landmarks, mean_eye_nose, mean_eye_mouth, get_face_center_by_nose
+from gazelib.label_transform import get_face_center_by_nose
 
 
 

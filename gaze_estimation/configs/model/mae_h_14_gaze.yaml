@@ -8,7 +8,7 @@ net_config:
     model_type: 'vit_h_14'
     global_pool: False
     drop_path_rate: 0.1
-    custom_pretrained_path: checkpoints/vit_pretrain/face_mae_1023_vit_huge_14/300epochs/checkpoint-huge_299of300.pth
+    custom_pretrained_path: checkpoints/mae_h14/mae_h14_checkpoint-299.pth
 
 
 

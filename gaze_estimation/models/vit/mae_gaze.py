@@ -11,7 +11,7 @@ from functools import partial
 from torchvision.models import vit_b_16, vit_b_32, vit_l_16, vit_l_32
 
 from models.vit.mae import interpolate_pos_embed, MaskedAutoencoderViT, vit_base_patch16, vit_large_patch16, vit_huge_patch14
-from gazelib.utils.color_text import print_green, print_cyan
+
 
 
 
@@ -46,7 +46,7 @@ class MAE_Gaze(nn.Module):
 			# keys_in_ckpt = checkpoint_model.keys()
 			# print('Keys in ckpt: ', keys_in_ckpt)
 			self.vit.load_state_dict( checkpoint_model, strict=False)
-			print_green('Loaded custom pretrained weights from {}'.format(custom_pretrained_path))
+			print('Loaded custom pretrained weights from {}'.format(custom_pretrained_path))
 
 		# del self.decoder_embed
 		# del self.mask_token
