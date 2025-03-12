@@ -2,27 +2,26 @@
 
 
 train: 
-  - configs/data/entry/xgaze/xgaze_0_80sub_d3.yaml
+  - configs/data/xgaze/xgaze_0_80sub_d3.yaml
 
 
 val: 
  
-  - configs/data/entry/mpiigaze_train.yaml
-  - configs/data/entry/mpiigaze_test.yaml
+  - configs/data/mpiigaze_train.yaml
+  - configs/data/mpiigaze_test.yaml
   
-  - configs/data/entry/eyediap_cs_train.yaml
-  - configs/data/entry/eyediap_cs_test.yaml
-  - configs/data/entry/eyediap_ft_train.yaml
-  - configs/data/entry/eyediap_ft_test.yaml
+  - configs/data/eyediap_cs_train.yaml
+  - configs/data/eyediap_cs_test.yaml
+  - configs/data/eyediap_ft_train.yaml
+  - configs/data/eyediap_ft_test.yaml
 
 test: 
-  - configs/data/entry/gazecapture_train.yaml
-  - configs/data/entry/gazecapture_test.yaml
-  - configs/data/entry/gaze360_train.yaml
-  - configs/data/entry/gaze360_test.yaml
+  - configs/data/gazecapture_train.yaml
+  - configs/data/gazecapture_test.yaml
+  - configs/data/gaze360_train.yaml
+  - configs/data/gaze360_test.yaml
 
-  - configs/data/entry/mpiigaze.yaml
-  # - configs/data/entry/our_mpii.yaml
+  - configs/data/mpiigaze.yaml
 
-  - configs/data/entry/eyediap_cs.yaml
-  - configs/data/entry/eyediap_ft.yaml
+  - configs/data/eyediap_cs.yaml
+  - configs/data/eyediap_ft.yaml

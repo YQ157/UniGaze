@@ -1,9 +1,0 @@
-
-train: 
-  - configs/data/entry/gazecapture_train_ds15.yaml
-
-test: 
-  
-  - configs/data/entry/gazecapture_test.yaml
-
-

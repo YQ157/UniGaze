@@ -1,5 +1,5 @@
-
-
+# ViT-Huge patchsize=14
+# data_yamls="${ffhqnv_yaml} ${facesyn_yaml} ${sfhq_t2i_224_yaml} ${vfhq_yaml} ${celebv_yaml} ${vgg2_yaml} ${xgaze_mvs_dense_224_yaml}"
 
 
 net_config:
@@ -9,8 +9,6 @@ net_config:
     global_pool: False
     drop_path_rate: 0.1
     custom_pretrained_path: checkpoints/vit_pretrain/face_mae_1023_vit_huge_14/300epochs/checkpoint-huge_299of300.pth
-
-
 
 
 

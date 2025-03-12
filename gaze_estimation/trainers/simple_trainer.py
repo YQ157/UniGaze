@@ -24,10 +24,8 @@ from utils import instantiate_from_cfg
 from gazelib.draw.draw_image import draw_gaze
 from gazelib.utils.color_text import print_green, print_cyan, print_magenta, print_red
 from gazelib.gaze.gaze_utils import angular_error
-from utils.helper import recover_image, align_images, worker_init_fn
+from utils.helper import recover_image, align_images, worker_init_fn, AverageMeter
 from utils.util import call_model_method, get_attributes_with_prefix
-
-from utils.gaze import AverageMeter
 import utils.misc as misc
 from utils.misc import get_grad_norm_, NativeScalerWithGradNormCount
 

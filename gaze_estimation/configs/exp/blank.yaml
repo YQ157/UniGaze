@@ -7,16 +7,10 @@ exp_name: tbd
 
 exp_explanation: 
 
-
 data: null 
-# configs/data/xgaze_60sub_d3.yaml
-# configs/data/xgaze_60sub.yaml
-
 
 ## can be overwritten
 model: null 
-# configs/model/res50.yaml
-# configs/model/vit_b_16_gaze.yaml
 
 
 trainer:  null

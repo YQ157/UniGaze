@@ -49,33 +49,15 @@ def re_normalize(image_tensor, old='[-1,1]', new='imagenet'):
 
 	return normalized_image
 
-# MEAN = [0.485, 0.456, 0.406]
-# STD = [0.229, 0.224, 0.225]
-# MEAN = [0.0,0.0,0.0]
-# STD = [1.0,1.0,1.0]
 
-def enhance_contrast_clahe(image):
-	clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-	lab = cv2.cvtColor(image, cv2.COLOR_RGB2LAB)
-	lab_planes = list( cv2.split(lab) )
-	lab_planes[0] = clahe.apply(lab_planes[0])
-	lab = cv2.merge(lab_planes)
-	image = cv2.cvtColor(lab, cv2.COLOR_LAB2RGB)
-	return image
+
 
 
 
 def wrap_transforms(image_transforms_type, image_size):
 
-	if image_transforms_type == 'basic_generation':
-		MEAN = [0.5,0.5,0.5]
-		STD = [0.5,0.5,0.5]
-		return transforms.Compose([
-				transforms.ToPILImage(),
-				transforms.ToTensor(),
-				transforms.Normalize(mean=MEAN, std=STD)
-			])
-	elif image_transforms_type == 'basic_imagenet':
+
+	if image_transforms_type == 'basic_imagenet':
 		MEAN = [0.485, 0.456, 0.406]
 		STD = [0.229, 0.224, 0.225]
 		return transforms.Compose([
@@ -84,21 +66,6 @@ def wrap_transforms(image_transforms_type, image_size):
 				transforms.Normalize(mean=MEAN, std=STD)
 			])
 	
-	elif image_transforms_type == 'gazeclr_augmentation':
-		MEAN = [0.5,0.5,0.5]
-		STD = [0.5,0.5,0.5]
-		size = image_size
-		s = 1
-		color_jitter = transforms.ColorJitter(0.8 * s, 0.8 * s, 0.8 * s, 0.2 * s)
-		return transforms.Compose([transforms.ToPILImage(),
-											# transforms.RandomResizedCrop(size=size),
-											transforms.RandomApply([color_jitter], p=0.8),
-											transforms.RandomAutocontrast(p=0.5),
-											transforms.RandomGrayscale(p=0.2),
-											GaussianBlur(kernel_size=int(0.1 * size)),
-											transforms.ToTensor(),
-											transforms.Normalize(mean=MEAN, std=STD)])
-
 	elif image_transforms_type == 'imagenet_augmentation':
 		MEAN = [0.485, 0.456, 0.406]
 		STD = [0.229, 0.224, 0.225]
@@ -119,3 +86,12 @@ def wrap_transforms(image_transforms_type, image_size):
 		raise NotImplementedError
 
 
+
+# def enhance_contrast_clahe(image):
+# 	clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+# 	lab = cv2.cvtColor(image, cv2.COLOR_RGB2LAB)
+# 	lab_planes = list( cv2.split(lab) )
+# 	lab_planes[0] = clahe.apply(lab_planes[0])
+# 	lab = cv2.merge(lab_planes)
+# 	image = cv2.cvtColor(lab, cv2.COLOR_LAB2RGB)
+# 	return image
