@@ -12,19 +12,6 @@
 </h4> -->
 
 
-## Installation
-<!-- 
-we tested on:
-- python 3.8
-- torch 2.0.1
-- torchvision 0.15.2
-- numpy 1.24.2
-- timm 1.0.9 -->
-
-To install the required dependencies, run:
-```bash
-pip install -r requirements.txt
-```
 
 ## Overview
 This repository contains code for both **MAE pre-training** and **gaze estimation training**.
@@ -38,6 +25,21 @@ This repository contains code for both **MAE pre-training** and **gaze estimatio
 - [ ] Release the MAE pre-training code.
 
 ---
+
+
+## Installation
+<!-- 
+we tested on:
+- python 3.8
+- torch 2.0.1
+- torchvision 0.15.2
+- numpy 1.24.2
+- timm 1.0.9 -->
+
+To install the required dependencies, run:
+```bash
+pip install -r requirements.txt
+```
 
 ## Pre-training (MAE)
 *(Coming soon)*
