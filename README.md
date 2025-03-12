@@ -1,6 +1,22 @@
 # UniGaze
 This is the official repository for the paper [UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training](https://arxiv.org/pdf/2502.02307)
 
+```
+@article{qin2025unigaze,
+  title={UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training},
+  author={Qin, Jiawei and Zhang, Xucong and Sugano, Yusuke},
+  journal={arXiv preprint arXiv:2502.02307},
+  year={2025}
+}
+
+@inproceedings{he2022masked,
+  title={Masked autoencoders are scalable vision learners},
+  author={He, Kaiming and Chen, Xinlei and Xie, Saining and Li, Yanghao and Doll{\'a}r, Piotr and Girshick, Ross},
+  booktitle={Proc. CVPR},
+  pages={16000--16009},
+  year={2022}
+}
+```
 # Installation
 we tested on XX enviornment
 - python 3.8
