@@ -1,14 +1,25 @@
-# UniGaze
-This is the official repository for the paper [UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training](https://arxiv.org/pdf/2502.02307).
+
+
+# [UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training](https://arxiv.org/pdf/2502.02307)
+<a href="https://jqin-home.github.io/">Jiawei Qin</a><sup>1</sup>, 
+<a href="https://www.ccmitss.com/zhang">Xucong Zhang</a><sup>2</sup>, 
+<a href="https://www.yusuke-sugano.info/">Yusuke Sugano</a><sup>1</sup>, 
+
+*<sup>1</sup>The University of Tokyo, <sup>2</sup>Computer Vision Lab, Delft University of Technology 
+
+<!-- <h4 align="left">
+<a href="">Project Page</a>
+</h4> -->
+
 
 ## Installation
-
+<!-- 
 we tested on:
 - python 3.8
 - torch 2.0.1
 - torchvision 0.15.2
 - numpy 1.24.2
-- timm 1.0.9
+- timm 1.0.9 -->
 
 To install the required dependencies, run:
 ```bash
