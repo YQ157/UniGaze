@@ -29,7 +29,7 @@
 
 
 ## Overview
-This repository contains the official PyTorch implementation of both **MAE pre-training** and **gaze estimation training**.
+This repository contains the official PyTorch implementation of both **MAE pre-training** and **unigaze**.
 
 
 
@@ -64,7 +64,7 @@ pip install -r requirements.txt
 
 
 ## Training (Gaze Estimation)
-Refer to [Gaze estimation training.md](./unigaze/README.md)
+Refer to [UniGaze training.md](./unigaze/README.md)
 
 
 ## Inference
