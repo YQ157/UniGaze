@@ -74,22 +74,6 @@ def vector_to_pitchyaw_torch(vectors):
     out[:, 1] = torch.atan2(vectors[:, 0], vectors[:, 2])  # phi
     return out
 
-# def angular_error(a, b):
-# 	"""Calculate angular error (via cosine similarity)."""
-# 	a = pitchyaw_to_vector(a) if a.shape[1] == 2 else a
-# 	b = pitchyaw_to_vector(b) if b.shape[1] == 2 else b
-
-# 	ab = np.sum(np.multiply(a, b), axis=1)
-# 	a_norm = np.linalg.norm(a, axis=1)
-# 	b_norm = np.linalg.norm(b, axis=1)
-
-# 	# Avoid zero-values (to avoid NaNs)
-# 	a_norm = np.clip(a_norm, a_min=1e-7, a_max=None)
-# 	b_norm = np.clip(b_norm, a_min=1e-7, a_max=None)
-
-# 	similarity = np.divide(ab, np.multiply(a_norm, b_norm))
-
-# 	return np.arccos(similarity) * 180.0 / np.pi
 
 def angular_error(a, b):
     """Calculate angular error (via cosine similarity)."""
@@ -180,40 +164,3 @@ def cos_similarity_torch(a, b):
     similarity = torch.clamp(similarity, min=0., max=1.)
     return similarity
 
-
-
-# ###########################################################################################################################
-# ############### by Takuru Shimoyama
-
-# def compute_kernel(x, y):
-#     x_size = x.size(0)
-#     y_size = y.size(0)
-#     dim = x.size(1)
-#     x = x.unsqueeze(1) # (x_size, 1, dim)
-#     y = y.unsqueeze(0) # (1, y_size, dim)
-#     tiled_x = x.expand(x_size, y_size, dim)
-#     tiled_y = y.expand(x_size, y_size, dim)
-#     kernel_input = (tiled_x - tiled_y).pow(2).mean(2)/float(dim)
-#     return torch.exp(-kernel_input) # (x_size, y_size)
-
-# def compute_mmd(x, y):
-#     x_kernel = compute_kernel(x, x)
-#     y_kernel = compute_kernel(y, y)
-#     xy_kernel = compute_kernel(x, y)
-#     mmd = x_kernel.mean() + y_kernel.mean() - 2*xy_kernel.mean()
-#     return mmd
-
-# # 重みの計算で使う。dim=1方向にユークリッド距離を計算する
-# def compute_l2norm(x, y):
-#     delta = 1e-8 # これの逆数が重みの上限になるわけなので値の選び方は重要。0.1くらいにしてもいいのかもしれない
-#     return torch.add(torch.sqrt(torch.sum(torch.pow(x - y, 2), 1)), delta) # 0除算を防ぐために微少量を加えておく
-
-# def angular_similarity_torch(a, b):
-#     # head pose labelをもとに重みを計算するのに使う
-#     """Calculate angular error (via cosine similarity)."""
-#     a = pitchyaw_to_vector(a) if a.size(1) == 2 else a
-#     b = pitchyaw_to_vector(b) if b.size(1) == 2 else b
-
-#     similarity = torch.nn.CosineSimilarity()(a, b)
-
-#     return torch.clamp(similarity, min=0., max=None) 
