@@ -33,8 +33,8 @@ This repository contains the official PyTorch implementation of both **MAE pre-t
 
 
 
-### Milestones:
-- :white_check_mark: Release pre-trained MAE checkpoints (B, L, H) and gaze estimation training code.
+### Todo:
+:white_check_mark: Release pre-trained MAE checkpoints (B, L, H) and gaze estimation training code.
 - [ ] Release UniGaze models trained on the *joint dataset* for inference.
 - [ ] Release inference code or gaze estimation demo.
 - [ ] Release the MAE pre-training code.
