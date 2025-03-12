@@ -29,7 +29,7 @@ This repository contains code for both **MAE pre-training** and **gaze estimatio
 ---
 
 ## Pre-training (MAE)
-*(Details to be added later.)*
+*((Coming soon))*
 
 ---
 
@@ -39,31 +39,32 @@ This repository contains code for both **MAE pre-training** and **gaze estimatio
 Refer to [Gaze estimation training.md](./gaze_estimation/README_GAZE.md)
 
 
-
 ## Inference
 
 ## Using Trained Gaze Estimation Models
-We provide **UniGaze-B, UniGaze-L, and UniGaze-H**, trained on **joint datasets** to enhance robustness and generalizability.
+*((Coming soon))*
+
+<!-- We provide **UniGaze-B, UniGaze-L, and UniGaze-H**, trained on **joint datasets** to enhance robustness and generalizability.
 
 ### Available Models
 | Backbone | Config Name | Checkpoint | Training Data |
 |----------|------------|------------|---------------|
-| UniGaze-B | `configs/model/unigaze_b.yaml` | [Download](#) | Joint datasets |
-| UniGaze-L | `configs/model/unigaze_l.yaml` | [Download](#) | Joint datasets |
-| UniGaze-H | `configs/model/unigaze_h.yaml` | [Download](#) | Joint datasets |
+| UniGaze-B | `configs/model/mae_b_16_gaze.yaml` | [Download](#) | |
+| UniGaze-L | `configs/model/mae_l_16_gaze.yaml` | [Download](#) | |
+| UniGaze-H | `configs/model/mae_h_14_gaze.yaml` | [Download](#) | |
 
 
 ```bash
 projdir=<...>/UniGaze/gaze_estimation
 cd ${projdir}
-model=configs/model/mae/mae_vit_h_14_pretrain_1023/299epoch.yaml 
+model=configs/model/mae_b_16_gaze.yaml 
 ckpt_resume=<path to the trained gaze estimator checkpoint>
 
 python draw_predict_video_wild.py \
     --model_cfg_path ${model} \
     -i ./input_video \
     --ckpt_resume ${ckpt_resume}
-```
+``` -->
 
 
 # Citation
