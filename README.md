@@ -1,32 +1,14 @@
 # UniGaze
-This is the official repository for the paper [UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training](https://arxiv.org/pdf/2502.02307)
-
-
-# Installation
-we tested on XX enviornment
-- python 3.8
-- torch 2.0
-
-please install the required packages by pip install -r requirements
-
-## Overview
-- this repo contains the [MAE](https://github.com/facebookresearch/mae) pre-training and gaze estimation training.
-### Milestones:
-- :white_check_mark: Release pre-trained MAE checkpoints (B, L, H) and gaze estimation training code.
-- [ ] Release UniGaze models trained on the *joint dataset* for inference.
-- [ ] Release inference code or gaze estimation demo.
-- [ ] Release the MAE pre-training code.
-
-
-
-## Pre-training (MAE)
-(skip for now)
-
-
-# UniGaze
 This is the official repository for the paper [UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training](https://arxiv.org/pdf/2502.02307).
 
 ## Installation
+
+we tested on:
+- python 3.8
+- torch 2.0.1
+- torchvision 0.15.2
+- numpy 1.24.2
+- timm 1.0.9
 
 To install the required dependencies, run:
 ```bash
@@ -36,6 +18,13 @@ pip install -r requirements.txt
 ## Overview
 This repository contains code for both **MAE pre-training** and **gaze estimation training**.
 
+
+
+### Milestones:
+- :white_check_mark: Release pre-trained MAE checkpoints (B, L, H) and gaze estimation training code.
+- [ ] Release UniGaze models trained on the *joint dataset* for inference.
+- [ ] Release inference code or gaze estimation demo.
+- [ ] Release the MAE pre-training code.
 
 ---
 

@@ -2,7 +2,7 @@
 
 
 train: 
-  - configs/data/xgaze/xgaze_0_80sub_d3.yaml
+  - configs/data/xgaze_0_80sub_d3.yaml
 
 
 val: 

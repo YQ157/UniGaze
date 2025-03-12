@@ -12,8 +12,8 @@ val:
   
 
 test: 
-  - configs/data/xgaze/xgaze_0_60sub.yaml
-  - configs/data/xgaze/xgaze_60_80sub.yaml
+  - configs/data/xgaze_0_60sub.yaml
+  - configs/data/xgaze_60_80sub.yaml
   - configs/data/gazecapture_train.yaml
   - configs/data/gazecapture_test.yaml
   - configs/data/gaze360_train.yaml

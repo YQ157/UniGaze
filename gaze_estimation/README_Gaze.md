@@ -25,12 +25,39 @@ UniGaze/gaze_estimation
 
 
 
+
+
+### Create a `data_path.yaml`
+This file is ignored so you have to create your own
+```
+UniGaze/gaze_estimation
+    ├── configs/
+        ├── data_path.yaml
+        ├── <others>
+```
+It should look like this, please refer to `datasets/xgaze.py` (etc.) for more details
+```yaml
+data:
+    xgaze_v2_224: <path to your data>
+    mpii: 
+    gazecapture_train_224: .
+    gazecapture_test: .
+    eyediap_cs: .
+    eyediap_ft: .
+    gaze360_224_train: .
+    gaze360_224_test: .
+```
+
 ### Experimental Settings
 
 | `data` Config Name | Training Data | Testing Data |
 |-------------|--------------|--------------|
 | `configs/exp/joint/X_GC_M_ED_g360.yaml` | Joint dataset (Train set) | Joint dataset (Test set)  |
 | `configs/exp/cross/train_X.yaml` | XGaze | XGaze test set |
+
+You can create your own train-test settings in a similar way:
+- `configs/exp/`: the yaml files here define the overall train/test settings
+- `configs/data/`: the yaml files here define the details of the datasets
 
 
 ### Training Instructions
@@ -41,6 +68,9 @@ UniGaze/gaze_estimation
 
 
 #### Distributed Data Parallel (DDP)
+
+Create a `run.sh` file like below and `sh run.sh`
+
 ```bash
 projdir=<...>/UniGaze/gaze_estimation
 cd ${projdir}

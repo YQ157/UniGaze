@@ -1,20 +1,11 @@
 type: datasets.xgaze.XGazeDataset
 params:
   data_name: xgaze_v2_224
-  saved_norm_config:
-    focal_norm: 960
-    distance_norm: 600
-    roi_size: [224, 224]  
-  norm_config:
-    focal_norm: 960
-    distance_norm: 600
-    roi_size: [224, 224]
   images_per_frame: 18
   color_type: bgr
   transform_type: 'basic_imagenet'
   dataset_path: null
   frame_tag: 'all'
-  camera_tag: 'all'
   image_size: 224
   keys_to_use: 
     - subject0083.h5
