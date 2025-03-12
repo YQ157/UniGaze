@@ -7,8 +7,8 @@
 | Model Name | `model` Config YAML | Checkpoint | Details |
 |------------|------------|------------|---------|
 | MAE-B16 | `configs/model/mae_b_16_gaze.yaml` | [Download (Google Drive)](https://drive.google.com/drive/folders/1vz38f90jPrMwb_lByzJfaMgH6BEtB49f?usp=sharing) | Backbone: ViT-Base |
-| MAE-L16 | `configs/model/mae_l_16_gaze.yaml` | [Download (Google Drive)](https://drive.google.com/drive/folders/1W-SMVOLhj9PFU3XWrfbMCqY544DI7vtV?usp=sharing) | Backbone: ViT-Large |
-| MAE-H14 | `configs/model/mae_h_14_gaze.yaml` | [Download (Google Drive)](https://drive.google.com/drive/folders/1-diS5Ff826wysQeeXiBiDo2bn_5FB3a0?usp=sharing) | Backbone: ViT-Huge |
+| MAE-L16 | `configs/model/mae_l_16_gaze.yaml` | [Download (Google Drive)](https://drive.google.com/drive/folders/1-diS5Ff826wysQeeXiBiDo2bn_5FB3a0?usp=sharing) | Backbone: ViT-Large |
+| MAE-H14 | `configs/model/mae_h_14_gaze.yaml` | [Download (Google Drive)](https://drive.google.com/drive/folders/1W-SMVOLhj9PFU3XWrfbMCqY544DI7vtV?usp=sharing) | Backbone: ViT-Huge |
 
 
 Put them in this structure (refer to their yaml config file)
