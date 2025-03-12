@@ -2,14 +2,28 @@
 
 # UniGaze
 
+<p align="center">
+<h1 align="center"><strong>UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training</strong></h1>
+<h3 align="center">[[arxiv]](https://arxiv.org/pdf/2502.02307)</h3>
 
-Official PyTorch implementation of [*UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training*](https://arxiv.org/pdf/2502.02307) 
+<p align="center">
+    <a href="https://jqin-home.github.io/">Jiawei Qin</a><sup>1</sup>, 
+    <a href="https://www.ccmitss.com/zhang">Xucong Zhang</a><sup>2</sup>, 
+    <a href="https://www.yusuke-sugano.info/">Yusuke Sugano</a><sup>1</sup>
+    <br>
+        <sup>1</sup>The University of Tokyo, 
+        <sup>2</sup>Computer Vision Lab, Delft University of Technology 
+</p>
+[]
 
-<a href="https://jqin-home.github.io/">Jiawei Qin</a><sup>1</sup>, 
+
+<!-- [*UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training*](https://arxiv.org/pdf/2502.02307)  -->
+
+<!-- <a href="https://jqin-home.github.io/">Jiawei Qin</a><sup>1</sup>, 
 <a href="https://www.ccmitss.com/zhang">Xucong Zhang</a><sup>2</sup>, 
 <a href="https://www.yusuke-sugano.info/">Yusuke Sugano</a><sup>1</sup>, 
 
-*<sup>1</sup>The University of Tokyo, <sup>2</sup>Computer Vision Lab, Delft University of Technology 
+*<sup>1</sup>The University of Tokyo, <sup>2</sup>Computer Vision Lab, Delft University of Technology  -->
 
 
 
@@ -21,7 +35,7 @@ Official PyTorch implementation of [*UniGaze: Towards Universal Gaze Estimation 
 
 
 ## Overview
-This repository contains code for both **MAE pre-training** and **gaze estimation training**.
+This repository contains the official PyTorch implementation of both **MAE pre-training** and **gaze estimation training**.
 
 
 
