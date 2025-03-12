@@ -1,10 +1,7 @@
-
-
-# UniGaze
-
+<!-- 
 <p align="center">
 <h1 align="center"><strong>UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training</strong></h1>
-<h3 align="center">[[arxiv]](https://arxiv.org/pdf/2502.02307)</h3>
+<!-- <h3 align="center">[[arxiv]](https://arxiv.org/pdf/2502.02307)</h3> -->
 
 <p align="center">
     <a href="https://jqin-home.github.io/">Jiawei Qin</a><sup>1</sup>, 
@@ -13,8 +10,19 @@
     <br>
         <sup>1</sup>The University of Tokyo, 
         <sup>2</sup>Computer Vision Lab, Delft University of Technology 
-</p>
-[]
+</p> -->
+
+# UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training
+<a href="https://jqin-home.github.io/">Jiawei Qin</a><sup>1</sup>, 
+<a href="https://www.ccmitss.com/zhang">Xucong Zhang</a><sup>2</sup>, 
+<a href="https://www.yusuke-sugano.info/">Yusuke Sugano</a><sup>1</sup>, 
+
+*<sup>1</sup>The University of Tokyo, <sup>2</sup>Computer Vision Lab, Delft University of Technology 
+
+> [[arxiv]](https://arxiv.org/pdf/2502.02307)
+
+
+
 
 
 <!-- [*UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training*](https://arxiv.org/pdf/2502.02307)  -->
