@@ -3,10 +3,7 @@
 # UniGaze
 
 
-Official PyTorch implementation of *UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training* 
-> UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training \
-> [[arxiv]](https://arxiv.org/pdf/2502.02307)
-
+Official PyTorch implementation of [*UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training*](https://arxiv.org/pdf/2502.02307) 
 
 <a href="https://jqin-home.github.io/">Jiawei Qin</a><sup>1</sup>, 
 <a href="https://www.ccmitss.com/zhang">Xucong Zhang</a><sup>2</sup>, 
