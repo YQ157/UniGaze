@@ -29,7 +29,7 @@ This repository contains code for both **MAE pre-training** and **gaze estimatio
 ---
 
 ## Pre-training (MAE)
-*((Coming soon))*
+*(Coming soon)*
 
 ---
 
@@ -42,7 +42,7 @@ Refer to [Gaze estimation training.md](./gaze_estimation/README_GAZE.md)
 ## Inference
 
 ## Using Trained Gaze Estimation Models
-*((Coming soon))*
+*(Coming soon)*
 
 <!-- We provide **UniGaze-B, UniGaze-L, and UniGaze-H**, trained on **joint datasets** to enhance robustness and generalizability.
 
