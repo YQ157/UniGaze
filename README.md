@@ -36,7 +36,7 @@ This repository contains code for both **MAE pre-training** and **gaze estimatio
 
 
 ## Training (Gaze Estimation)
-Refer to [Gaze estimation training.md](./gaze_estimation/README_GAZE.md)
+Refer to [Gaze estimation training.md](./gaze_estimation/README.md)
 
 
 ## Inference
