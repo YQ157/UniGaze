@@ -29,7 +29,7 @@
 
 #### Distributed Data Parallel (DDP)
 ```bash
-projdir=<path to UniGaze>
+projdir=<...>/UniGaze/gaze_estimation
 cd ${projdir}
 OUTPUT_DIR=${projdir}/logs
 exp=blank.yaml

@@ -34,10 +34,10 @@ pip install -r requirements.txt
 This repository contains code for both **MAE pre-training** and **gaze estimation training**.
 
 ### Milestones:
-- Provide **pre-trained MAE checkpoints** and gaze estimation training code.
-- Release a **state-of-the-art (SOTA) gaze estimation model** trained on a joint dataset for inference.
-- Implement a **gaze estimation demo**.
-- Provide the **MAE pre-training code**.
+:white_check_mark: Release pre-trained MAE checkpoints (B, L, H) and gaze estimation training code.
+- [ ] Release UniGaze models trained on the *joint dataset* for inference.
+- [ ] Release inference code or gaze estimation demo.
+- [ ] Release the MAE pre-training code.
 
 ---
 
