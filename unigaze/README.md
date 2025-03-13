@@ -2,7 +2,7 @@
 
 # Training (Gaze Estimation)
 
-### Model Cards
+### MAE Models
 | Model Name | `model` Config YAML | Checkpoint | Details |
 |------------|------------|------------|---------|
 | MAE-B16 | `configs/model/mae_b_16_gaze.yaml` | [Download (Google Drive)](https://drive.google.com/drive/folders/1vz38f90jPrMwb_lByzJfaMgH6BEtB49f?usp=sharing) | Backbone: ViT-Base |
