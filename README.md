@@ -68,11 +68,12 @@ We provide the following trained models:
 
 
 
-### Loading Pretrained Models
-- Download the pretrained models and place them in `./unigaze/logs`.
-- For instructions on how to load and use these models, please refer to [load_gaze_model.ipynb](./unigaze/load_gaze_model.ipynb).
 
-### Predicting Gaze from Videos
+### Loading Pretrained Models
+- You can refer to [load_gaze_model.ipynb](./unigaze/load_gaze_model.ipynb) for instructions on loading the model and integrating it into your own codebase.
+- Alternatively, you can use the example code below to predict gaze from videos.
+
+#### Predicting Gaze from Videos
 To predict gaze direction from videos, use the following script:
 
 ```bash
