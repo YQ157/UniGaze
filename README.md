@@ -79,7 +79,7 @@ cd ${projdir}
 model=configs/model/mae_b_16_gaze.yaml 
 ckpt_resume=<path to the trained gaze estimator checkpoint>
 
-python draw_predict_video_wild.py \
+python predict_gaze_video.py \
     --model_cfg_path ${model} \
     -i ./input_video \
     --ckpt_resume ${ckpt_resume}
