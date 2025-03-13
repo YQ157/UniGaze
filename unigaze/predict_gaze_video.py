@@ -193,21 +193,6 @@ def load_checkpoint(model, ckpt_key, ckpt_path):
 
 
 arrow_colors = [
-		# (255, 0, 255),  # Magenta
-		# (255, 255, 0),  # Cyan
-		# (0, 255, 0),    # Green
-		# (255, 0, 0),    # Blue
-		# (0, 255, 255),  # Yellow
-		# (128, 128, 128), # Gray
-		# (0, 0, 255),    # Red
-		# (0, 0, 0),      # Black
-		# (255, 255, 255), # White
-		# (128, 0, 0),    # Maroon
-		# (0, 128, 0),    # Olive
-		# (0, 0, 128),    # Navy
-		# (128, 128, 0),  # Teal
-		# (128, 0, 128),  # Purple
-		# (0, 128, 128),  # Lime
 		(47, 255, 173), ## green yellow
 	]
 

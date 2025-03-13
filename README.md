@@ -67,20 +67,24 @@ pip install -r requirements.txt
 Refer to [UniGaze training.md](./unigaze/README.md)
 
 
-## Inference
+## Usage of UniGaze
 
-## Using Trained Gaze Estimation Models
-*(Coming soon)*
-
-<!-- We provide **UniGaze-B, UniGaze-L, and UniGaze-H**, trained on **joint datasets** to enhance robustness and generalizability.
 
 ### Available Models
-| Backbone | Config Name | Checkpoint | Training Data |
-|----------|------------|------------|---------------|
-| UniGaze-B | `configs/model/mae_b_16_gaze.yaml` | [Download](#) | |
-| UniGaze-L | `configs/model/mae_l_16_gaze.yaml` | [Download](#) | |
-| UniGaze-H | `configs/model/mae_h_14_gaze.yaml` | [Download](#) | |
+We provide below models.
 
+|   Filename   | Backbone |   Training Data   | Checkpoint |
+|--------------|----------|-------------------|------------|
+|`unigaze_b16_joint.pth.tar`  | UniGaze-B | *Joint Datasets* | [Download (Google Drive)](https://drive.google.com/file/d/1xdPbzAX8d3cPAMChFjRThryIWVp9Ng_f/view?usp=sharing) |
+|`unigaze_L16_joint.pth.tar`  | UniGaze-L | *Joint Datasets* | [Download (Google Drive)](https://drive.google.com/file/d/1JR20_iGTU8pSXtKIC-_swiSRImWLAbBC/view?usp=sharing) |
+|`unigaze_h14_joint.pth.tar`  | UniGaze-H | *Joint Datasets* | [Download (Google Drive)](https://drive.google.com/file/d/16z_Y8_yi53xTw_-5Pw9H4jjAOPebIFdA/view?usp=sharing) | 
+|`unigaze_h14_cross_X.pth.tar`| UniGaze-H |  ETH-XGaze       | [Download (Google Drive)](https://drive.google.com/file/d/1BVYGOK5NwXUPr63DnbYGeQ_yqlevv9VR/view?usp=sharing) |
+
+### Loading Models
+Download and put these models under `./unigaze/logs`.
+Please refer to [load_gaze_model.ipynb](./unigaze/load_gaze_model.ipynb) for loading the model.
+
+### Predicting Gaze from videos
 
 ```bash
 projdir=<...>/UniGaze/unigaze
@@ -92,7 +96,8 @@ python draw_predict_video_wild.py \
     --model_cfg_path ${model} \
     -i ./input_video \
     --ckpt_resume ${ckpt_resume}
-``` -->
+``` 
+
 
 
 # Citation
