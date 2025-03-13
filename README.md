@@ -10,19 +10,6 @@
 
 
 
-
-
-<!-- [*UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training*](https://arxiv.org/pdf/2502.02307)  -->
-
-<!-- <a href="https://jqin-home.github.io/">Jiawei Qin</a><sup>1</sup>, 
-<a href="https://www.ccmitss.com/zhang">Xucong Zhang</a><sup>2</sup>, 
-<a href="https://www.yusuke-sugano.info/">Yusuke Sugano</a><sup>1</sup>, 
-
-*<sup>1</sup>The University of Tokyo, <sup>2</sup>Computer Vision Lab, Delft University of Technology  -->
-
-
-
-
 <!-- <h4 align="left">
 <a href="">Project Page</a>
 </h4> -->
@@ -45,13 +32,7 @@ This repository contains the official PyTorch implementation of both **MAE pre-t
 
 
 ## Installation
-<!-- 
-we tested on:
-- python 3.8
-- torch 2.0.1
-- torchvision 0.15.2
-- numpy 1.24.2
-- timm 1.0.9 -->
+
 
 To install the required dependencies, run:
 ```bash
@@ -64,16 +45,16 @@ pip install -r requirements.txt
 ---
 
 
-
 ## Training (Gaze Estimation)
-Refer to [UniGaze training.md](./unigaze/README.md)
 
+For detailed training instructions, please refer to [UniGaze Training](./unigaze/README.md).
 
 ## Usage of UniGaze
 
 
 ### Available Models
-We provide below models.
+
+We provide the following trained models:
 
 |   Filename   | Backbone |   Training Data   | Checkpoint |
 |--------------|----------|-------------------|------------|
@@ -82,11 +63,15 @@ We provide below models.
 |`unigaze_h14_joint.pth.tar`  | UniGaze-H | *Joint Datasets* | [Download (Google Drive)](https://drive.google.com/file/d/16z_Y8_yi53xTw_-5Pw9H4jjAOPebIFdA/view?usp=sharing) | 
 |`unigaze_h14_cross_X.pth.tar`| UniGaze-H |  ETH-XGaze       | [Download (Google Drive)](https://drive.google.com/file/d/1BVYGOK5NwXUPr63DnbYGeQ_yqlevv9VR/view?usp=sharing) |
 
-### Loading Models
-Download and put these models under `./unigaze/logs`.
-Please refer to [load_gaze_model.ipynb](./unigaze/load_gaze_model.ipynb) for loading the model.
 
-### Predicting Gaze from videos
+
+### Loading Pretrained Models
+Download the pretrained models and place them in `./unigaze/logs`.
+
+For instructions on how to load and use these models, please refer to [load_gaze_model.ipynb](./unigaze/load_gaze_model.ipynb).
+
+### Predicting Gaze from Videos
+To predict gaze direction from videos, use the following script:
 
 ```bash
 projdir=<...>/UniGaze/unigaze
@@ -103,6 +88,8 @@ python draw_predict_video_wild.py \
 
 
 # Citation
+If you find our work useful for your research, please consider citing:
+
 ```
 @article{qin2025unigaze,
   title={UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training},
@@ -110,12 +97,10 @@ python draw_predict_video_wild.py \
   journal={arXiv preprint arXiv:2502.02307},
   year={2025}
 }
-
-@inproceedings{he2022masked,
-  title={Masked autoencoders are scalable vision learners},
-  author={He, Kaiming and Chen, Xinlei and Xie, Saining and Li, Yanghao and Doll{\'a}r, Piotr and Girshick, Ross},
-  booktitle={Proc. CVPR},
-  pages={16000--16009},
-  year={2022}
-}
 ```
+We also acknowledge the excellent work on [MAE](https://github.com/facebookresearch/mae.git).
+
+
+
+## Contact
+If you have any questions, feel free to contact Jiawei Qin at jqin@iis.u-tokyo.ac.jp.
