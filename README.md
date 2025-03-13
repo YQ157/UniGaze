@@ -8,6 +8,8 @@
 *<sup>1</sup>The University of Tokyo, <sup>2</sup>Computer Vision Lab, Delft University of Technology 
 
 
+<img src="./teaser.png" width="900" alt="grid"/>
+
 
 
 <!-- <h4 align="left">
