@@ -75,13 +75,10 @@ To predict gaze direction from videos, use the following script:
 ```bash
 projdir=<...>/UniGaze/unigaze
 cd ${projdir}
-model=configs/model/mae_b_16_gaze.yaml 
-ckpt_resume=<path to the trained gaze estimator checkpoint>
-
 python predict_gaze_video.py \
-    --model_cfg_path ${model} \
+    --model_cfg_path configs/model/mae_b_16_gaze.yaml  \
     -i ./input_video \
-    --ckpt_resume ${ckpt_resume}
+    --ckpt_resume logs/unigaze_b16_joint.pth.tar
 ``` 
 
 
