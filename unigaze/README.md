@@ -23,9 +23,6 @@ UniGaze/unigaze
 ```
 
 
-### Loading models
-
-
 ### Create a `data_path.yaml`
 This file is ignored so you have to create your own
 ```
