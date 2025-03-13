@@ -241,14 +241,10 @@ class SimpleTrainer(nn.Module):
 		return optimizer, scheduler
 	
 	def configure_hyperparams(self, config ):
-		self.iteration_based_on = config.iteration_based_on
-		if self.iteration_based_on == 'train_loader':
-			self.iteration_per_epoch = len(self.train_loader)
-		else:
-			raise NotImplementedError
+
+		self.iteration_per_epoch = len(self.train_loader)
 		if hasattr(self, 'logging_dir'):
 			OmegaConf.save({ 
-				'iteration_based_on': self.iteration_based_on,
 				'iteration_per_epoch': self.iteration_per_epoch,
 				}, os.path.join(self.logging_dir, "loader_params.yaml"))
 
@@ -633,11 +629,6 @@ class SimpleTrainer(nn.Module):
 		print(f'loaded {ckpt_key}')
 		del weights
 
-	def toggle_grad(self, model, requires_grad):
-		for p in model.parameters():
-			p.requires_grad_(requires_grad)
-	
-
 
 	def print_entry(self, i, vis_entry, tag):
 		if i % ( self.iteration_per_epoch // 10) != 0:
@@ -669,15 +660,6 @@ class SimpleTrainer(nn.Module):
 				grid = []
 			
 
-
-	def require_grad(self, model, requires_grad):
-		if type(model) == list:
-			for m in model:
-				for param in m.parameters():
-					param.requires_grad = requires_grad
-		else:
-			for param in model.parameters():
-				param.requires_grad = requires_grad
 
 	def update_meters(self, metrics_updates):
 		for key, value in metrics_updates.items():

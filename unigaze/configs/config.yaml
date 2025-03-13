@@ -22,7 +22,6 @@ optimizer_cfg: null
 scheduler_cfg: null
 
 batch_size: 50
-unsup_batch_size: 100
 test_batch_size: 200
 
 epochs: 25
@@ -30,7 +29,6 @@ valid_epoch: 1
 eval_epoch: 10
 save_epoch: 10
 
-iteration_based_on: train_loader
 
 use_autocast: False
 
