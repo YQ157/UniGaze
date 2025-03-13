@@ -12,6 +12,7 @@ cache/
 *.drawio
 
 *.ipynb
+!load_gaze_model.ipynb
 .ipynb_checkpoints
 *.npy
 *.dat
