@@ -5,7 +5,7 @@
 <a href="https://www.ccmitss.com/zhang">Xucong Zhang</a><sup>2</sup>, 
 <a href="https://www.yusuke-sugano.info/">Yusuke Sugano</a><sup>1</sup>, 
 
-*<sup>1</sup>The University of Tokyo, <sup>2</sup>Computer Vision Lab, Delft University of Technology 
+<sup>1</sup>The University of Tokyo, <sup>2</sup>Computer Vision Lab, Delft University of Technology 
 
 
 <img src="./teaser.png" width="800" alt="grid"/>
