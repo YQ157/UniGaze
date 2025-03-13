@@ -34,9 +34,10 @@ This repository contains the official PyTorch implementation of both **MAE pre-t
 
 
 ### Todo:
-:white_check_mark: Release pre-trained MAE checkpoints (B, L, H) and gaze estimation training code.
-- [ ] Release UniGaze models trained on the *joint dataset* for inference.
-- [ ] Release inference code or gaze estimation demo.
+- :white_check_mark: Release pre-trained MAE checkpoints (B, L, H) and gaze estimation training code.
+- :white_check_mark: Release UniGaze models for inference.
+- :white_check_mark: Code for predicting gaze of videos
+- [ ] gaze estimation demo.
 - [ ] Release the MAE pre-training code.
 
 ---
