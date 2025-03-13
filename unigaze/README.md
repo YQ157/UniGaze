@@ -1,6 +1,5 @@
 
 
-
 # Training (Gaze Estimation)
 
 ### Model Cards
@@ -24,7 +23,7 @@ UniGaze/unigaze
 ```
 
 
-
+### Loading models
 
 
 ### Create a `data_path.yaml`
@@ -39,7 +38,7 @@ It should look like this, please refer to `datasets/xgaze.py` (etc.) for more de
 ```yaml
 data:
     xgaze_v2_224: <path to your data>
-    mpii: 
+    mpii: .
     gazecapture_train_224: .
     gazecapture_test: .
     eyediap_cs: .
