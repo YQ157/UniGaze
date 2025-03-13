@@ -49,6 +49,8 @@ pip install -r requirements.txt
 
 For detailed training instructions, please refer to [UniGaze Training](./unigaze/README.md).
 
+---
+
 ## Usage of UniGaze
 
 
@@ -82,6 +84,7 @@ python predict_gaze_video.py \
 ``` 
 
 
+---
 
 # Citation
 If you find our work useful for your research, please consider citing:
