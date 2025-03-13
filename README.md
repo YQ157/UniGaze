@@ -39,13 +39,11 @@ To install the required dependencies, run:
 pip install -r requirements.txt
 ```
 
----
 
 
 ## Pre-training (MAE)
 *(Coming soon)*
 
----
 
 
 ## Training (Gaze Estimation)
