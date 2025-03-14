@@ -49,7 +49,7 @@ data:
 | `data` Config Name | Training Data | Testing Data |
 |-------------|--------------|--------------|
 | `configs/exp/joint/X_GC_M_ED_g360.yaml` | Joint dataset (Train set) | Joint dataset (Test set)  |
-| `configs/exp/cross/train_X.yaml` | XGaze | XGaze test set |
+| `configs/exp/cross/train_X.yaml` | XGaze | Other datasets |
 
 You can create your own train-test settings in a similar way:
 - `configs/exp/`: the yaml files here define the overall train/test settings
