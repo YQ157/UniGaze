@@ -68,7 +68,7 @@ configs/data_path.yaml
 !configs/trainer/figs/*.jpg
 !configs/trainer/figs/*.png
 !assets/figs/*/*
-
+!data/face_model.txt
 batch_log*/
 
 scripts/

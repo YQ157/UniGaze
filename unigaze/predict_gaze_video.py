@@ -328,7 +328,7 @@ if __name__ == "__main__":
 
 					################# normalization #################
 					camera_matrix, camera_distortion = set_dummy_camera_model(image=image)
-					face_model_load = np.loadtxt( 'assets/face_model.txt')
+					face_model_load = np.loadtxt( 'data/face_model.txt')
 					face_model = face_model_load[[20, 23, 26, 29, 15, 19], :]
 					facePts = face_model.reshape(6, 1, 3)
 
