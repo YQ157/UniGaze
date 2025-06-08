@@ -16,7 +16,7 @@ Each script outputs one or more **224 × 224** h5 files that this repo can read 
 
 ## Nomralized datasets structure (in h5 file)
 
-Create a yaml file: `./MAE/configs/data_path.yaml`, pointing to the directory where the datasets are saved.
+Create a yaml file: `MAE/configs/data_path.yaml`, pointing to the directory where the datasets are saved.
 
 ```yaml
 ---
@@ -66,7 +66,7 @@ facesyn_224:
     FaceSynthetics_224.h5
 ```
 
-For more details, please refer to the datasets defined in `./datasets`.
+For more details, please refer to the datasets defined in `MAE/datasets`.
 
 ### More datasets
 You can create your custom dataset class as long as the iteration of `__getitem__` returns
