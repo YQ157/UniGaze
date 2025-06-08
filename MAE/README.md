@@ -76,7 +76,7 @@ def __getitem__(self,index):
     entry = {
         'image': self.preprocess_image(image),
         'gaze': np.array([0,0]).astype('float'),
-        'head': head_label,
+        'head': head_label, ## can set to dummy value np.array([0,0]).astype('float')
     }
     return entry
 ```
