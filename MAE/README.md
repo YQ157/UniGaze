@@ -1,6 +1,6 @@
 # Masked Autoencoder Pre-training on Normalized Facial Datasets
 
-This repo extends the original **MAE** implementation to large-scale, pose-normalized face images.  
+This repo modifies the original **MAE** implementation to large-scale, normalized face images.  
 Only the _dataset_ and _dataloader_ logic have been changed; all MAE core code and hyper-parameters remain intact.
 
 
