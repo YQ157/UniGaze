@@ -1,0 +1,21 @@
+
+
+
+type: datasets.celebv.CelebVDataset
+params:
+  data_name: celebv_224
+
+  color_type: bgr
+  transform_type: 'jitter'
+  dataset_path: null
+  image_size: 224
+  sample_rate_use: 3
+
+  keys_to_use: 
+    - part_1.h5
+    - part_2.h5
+    - part_3.h5
+    - part_4.h5
+    - part_5.h5
+    - part_6.h5
+    - part_7.h5

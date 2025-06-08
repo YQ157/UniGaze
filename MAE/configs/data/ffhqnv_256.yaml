@@ -1,0 +1,11 @@
+type: datasets.face_dataset.FaceDataset
+params:
+  data_name: ffhq_albedo_nv_256
+  color_type: bgr
+  transform_type: 'jitter'
+  dataset_path: null
+  image_size: 224
+
+  keys_to_use: 
+    - ffhqnv25000_256.h5
+

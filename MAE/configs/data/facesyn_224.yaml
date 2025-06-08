@@ -1,0 +1,11 @@
+type: datasets.face_dataset.FaceDataset
+params:
+  data_name: facesyn_224
+
+  color_type: bgr
+  transform_type: 'jitter'
+  dataset_path: null
+  image_size: 224
+
+  keys_to_use: 
+    - FaceSynthetics_224.h5

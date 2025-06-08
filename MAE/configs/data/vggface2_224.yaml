@@ -1,0 +1,29 @@
+type: datasets.vggface2.VGGFace2Dataset
+params:
+  data_name: vggface2_224
+  num_images_person: 20
+  color_type: bgr
+  transform_type: 'jitter'
+  dataset_path: null
+  image_size: 224
+
+  gruops_to_use:
+    - group_0.h5 
+    - group_1.h5 
+    - group_2.h5 
+    - group_3.h5 
+    - group_4.h5 
+    - group_5.h5 
+    - group_6.h5 
+    - group_7.h5 
+    - group_8.h5 
+    - group_9.h5 
+    - group_10.h5 
+    - group_11.h5 
+    - group_12.h5 
+    - group_13.h5 
+    - group_14.h5 
+    - group_15.h5 
+    - group_16.h5 
+    - group_17.h5 
+    - group_test.h5 

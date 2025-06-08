@@ -1,0 +1,19 @@
+
+
+
+type: datasets.vfhq.VFHQDataset
+params:
+  data_name: vfhq_224
+  color_type: bgr
+  transform_type: 'jitter'
+  dataset_path: null
+  image_size: 224
+
+
+  keys_to_use: 
+    - part1.h5
+    - part2.h5
+    - part3.h5
+    - part4.h5
+    - part5.h5
+    - part6.h5
