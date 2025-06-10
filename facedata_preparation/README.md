@@ -28,8 +28,7 @@ This folder hosts the **pre-processing / normalization code** used by **UniGaze*
 
 
 ## Download original datasets from their respective webstie
-You may do not want to bother trying the long-time reconstruction and rendering process, you can also add any new facial datasets you want. 
-Just follow a similar normalization process.
+If you’d prefer to skip the lengthy reconstruction and rendering steps of FFHQ-NV and XGaze-Dense, feel free to use any facial dataset of your choice—just run it through the same normalization pipeline.
 
 ## Run the below scripts
 The main parts of these scripts are almost the same, they only differ in how to load the original data and how to save them,
