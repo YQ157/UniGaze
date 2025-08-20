@@ -101,7 +101,17 @@ If you find our work useful for your research, please consider citing:
 ```
 We also acknowledge the excellent work on [MAE](https://github.com/facebookresearch/mae.git).
 
+---
 
+## License:
+
+This model is licensed under the ModelGo Attribution-NonCommercial-ResponsibleAI License, Version 2.0 (MG-NC-RAI-2.0);
+you may use this model only in compliance with the License.
+You may obtain a copy of the License at
+
+https://ids.nus.edu.sg/docs/modelgo/MG-NC-RAI-2.0.txt
+
+---
 
 ## Contact
 If you have any questions, feel free to contact Jiawei Qin at jqin@iis.u-tokyo.ac.jp.
