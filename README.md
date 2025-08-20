@@ -109,7 +109,9 @@ This model is licensed under the ModelGo Attribution-NonCommercial-ResponsibleAI
 you may use this model only in compliance with the License.
 You may obtain a copy of the License at
 
-https://ids.nus.edu.sg/docs/modelgo/MG-NC-RAI-2.0.txt
+https://github.com/Xtra-Computing/ModelGo/blob/main/MGL/V2/MG-BY-NC-RAI/LICENSE
+
+A comprehensive introduction to the ModelGo license can be found here: https://www.modelgo.li/
 
 ---
 
