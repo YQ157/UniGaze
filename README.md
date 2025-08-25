@@ -1,5 +1,5 @@
 # UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training
-> [[arxiv]](https://arxiv.org/pdf/2502.02307)
+> [[arxiv]](https://arxiv.org/pdf/2502.02307), [[online demo]](https://huggingface.co/spaces/xucongzhang/UniGaze)
 
 <a href="https://jqin-home.github.io/">Jiawei Qin</a><sup>1</sup>, 
 <a href="https://www.ccmitss.com/zhang">Xucong Zhang</a><sup>2</sup>, 
@@ -28,7 +28,7 @@ This repository contains the official PyTorch implementation of both **MAE pre-t
 - :white_check_mark: Release UniGaze models for inference.
 - :white_check_mark: Code for predicting gaze from videos
 - :white_check_mark: (2025 June 08 updated) Release the MAE pre-training code.
-- Gaze estimation demo.
+- :white_check_mark: (2025 August 25 updated) Online demo is available.
 
 ---
 
