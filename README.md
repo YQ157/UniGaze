@@ -71,7 +71,20 @@ We provide the following trained models:
 
 ### Loading Pretrained Models
 - You can refer to [load_gaze_model.ipynb](./unigaze/load_gaze_model.ipynb) for instructions on loading the model and integrating it into your own codebase.
-- Alternatively, you can use the example code below to predict gaze from videos.
+  - If you want to load the MAE, use `custom_pretrained_path` arguments.
+  - If you want to load the UniGaze (MAE + gaze_fc), directly use `load_state_dict`
+
+```python
+## Loading MAE-backbone only - this will not load the gaze_fc
+mae_h14 = MAE_Gaze(model_type='vit_h_14', custom_pretrained_path='checkpoints/mae_h14/mae_h14_checkpoint-299.pth')
+
+## Loading UniGaze
+unigaze_h14_crossX = MAE_Gaze(model_type='vit_h_14') ## custom_pretrained_path does not matter because it will be overwritten by the UniGaze weight
+weight = torch.load('logs/unigaze_h14_cross_X.pth.tar', map_location='cpu')['model_state']
+unigaze_h14_crossX.load_state_dict(weight, strict=True)
+```
+
+
 
 #### Predicting Gaze from Videos
 To predict gaze direction from videos, use the following script:
