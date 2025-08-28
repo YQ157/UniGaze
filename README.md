@@ -1,5 +1,5 @@
 # UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training
-> [[arxiv]](https://arxiv.org/pdf/2502.02307)
+> [[arxiv]](https://arxiv.org/pdf/2502.02307), [[online demo]](https://huggingface.co/spaces/UniGaze/UniGaze)
 
 <a href="https://jqin-home.github.io/">Jiawei Qin</a><sup>1</sup>, 
 <a href="https://www.ccmitss.com/zhang">Xucong Zhang</a><sup>2</sup>, 
@@ -28,7 +28,7 @@ This repository contains the official PyTorch implementation of both **MAE pre-t
 - :white_check_mark: Release UniGaze models for inference.
 - :white_check_mark: Code for predicting gaze from videos
 - :white_check_mark: (2025 June 08 updated) Release the MAE pre-training code.
-- Gaze estimation demo.
+- :white_check_mark: (2025 August 25 updated) Online demo is available.
 
 ---
 
@@ -114,7 +114,19 @@ If you find our work useful for your research, please consider citing:
 ```
 We also acknowledge the excellent work on [MAE](https://github.com/facebookresearch/mae.git).
 
+---
 
+## License:
+
+This model is licensed under the ModelGo Attribution-NonCommercial-ResponsibleAI License, Version 2.0 (MG-NC-RAI-2.0);
+you may use this model only in compliance with the License.
+You may obtain a copy of the License at
+
+https://github.com/Xtra-Computing/ModelGo/blob/main/MGL/V2/MG-BY-NC-RAI/LICENSE
+
+A comprehensive introduction to the ModelGo license can be found here: https://www.modelgo.li/
+
+---
 
 ## Contact
 If you have any questions, feel free to contact Jiawei Qin at jqin@iis.u-tokyo.ac.jp.

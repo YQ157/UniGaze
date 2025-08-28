@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training</title>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="UniGaze: Universal gaze estimation via large-scale self-supervised pre-training. Live demo, code, and paper." />
+  <meta property="og:title" content="UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training" />
+  <meta property="og:description" content="Universal gaze estimation with large-scale self-supervised pre-training. Try the live demo in your browser." />
+  <meta property="og:image" content="assets/teaser.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="teaser.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* slightly nicer code blocks */
+    pre code { white-space: pre; }
+  </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+  <!-- Header -->
+  <header class="max-w-5xl mx-auto px-4 py-10 text-center">
+    <h1 class="text-3xl md:text-4xl font-bold">
+      UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training
+    </h1>
+    <p class="mt-3 text-lg text-neutral-600">
+      Universal gaze estimation with large-scale self-supervised pre-training.
+    </p>
+  
+    <!-- Buttons -->
+    <div class="mt-5 flex flex-wrap justify-center gap-3">
+      <a href="https://arxiv.org/abs/2502.02307" class="px-4 py-2 rounded-xl bg-black text-white">Paper (arXiv)</a>
+      <a href="https://github.com/ut-vision/UniGaze" class="px-4 py-2 rounded-xl bg-black text-white">Code (GitHub)</a>
+      <a href="https://huggingface.co/spaces/xucongzhang/UniGaze" class="px-4 py-2 rounded-xl bg-black text-white">Live Demo</a>
+    </div>
+  
+    <!-- Authors -->
+    <div class="mt-6 text-neutral-700">
+      <p class="leading-relaxed">
+        <a class="underline" href="https://jqin-home.github.io/" target="_blank" rel="noopener">Jiawei Qin</a><sup>1</sup>,
+        <a class="underline" href="https://www.ccmitss.com/zhang" target="_blank" rel="noopener">Xucong Zhang</a><sup>2</sup>,
+        <a class="underline" href="https://www.yusuke-sugano.info/" target="_blank" rel="noopener">Yusuke Sugano</a><sup>1</sup>
+      </p>
+      <p class="text-sm mt-1">
+        <sup>1</sup>The University of Tokyo &nbsp; &nbsp; <sup>2</sup>Delft University of Technology
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 pb-20">
+    <!-- Teaser Figure -->
+    <section class="mb-12">
+      <img src="teaser.png" alt="UniGaze teaser" class="rounded-2xl shadow w-full">
+    </section>
+
+    <!-- Abstract -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">Abstract</h2>
+      <p class="text-neutral-800 leading-relaxed">
+        Despite decades of research on data collection and model architectures, current gaze estimation models
+        encounter significant challenges in generalizing across diverse data domains. Recent advances in self-supervised
+        pre-training have shown remarkable performances in generalization across various vision tasks. However, their
+        effectiveness in gaze estimation remains unexplored. We propose UniGaze, for the first time, leveraging
+        large-scale in-the-wild facial datasets for gaze estimation through self-supervised pre-training. Through
+        systematic investigation, we clarify critical factors that are essential for effective pretraining in gaze
+        estimation. Our experiments reveal that self-supervised approaches designed for semantic tasks fail when
+        applied to gaze estimation, while our carefully designed pre-training pipeline consistently improves cross-domain
+        performance. Through comprehensive experiments of challenging cross-dataset evaluation and novel protocols
+        including leave-one-dataset-out and joint-dataset settings, we demonstrate that UniGaze significantly improves
+        generalization across multiple data domains while minimizing reliance on costly labeled data. Source code and
+        model are available at <a class="underline" href="https://github.com/ut-vision/UniGaze" target="_blank" rel="noopener">https://github.com/ut-vision/UniGaze</a>.
+      </p>
+    </section>
+
+    <!-- Demo Videos -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Demo Videos</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="aspect-video bg-black rounded-2xl overflow-hidden shadow">
+          <video controls muted class="w-full h-full">
+            <source src="demo/video_1_pred.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="aspect-video bg-black rounded-2xl overflow-hidden shadow">
+          <video controls muted class="w-full h-full">
+            <source src="demo/video_2_pred.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Embedded Live Demo -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">Try the Live Demo</h2>
+      <p class="text-neutral-700 mb-3">
+        Upload an image or a short video directly in your browser. The demo is hosted at Hugging Face Space: https://huggingface.co/spaces/xucongzhang/UniGaze
+      </p>
+      <div class="rounded-2xl overflow-hidden shadow border">
+        <iframe
+          src="https://UniGaze-unigaze.hf.space/?__theme=light"
+          style="width:100%; height:900px; border:0;"
+          allow="clipboard-read; clipboard-write"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Citation -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">BibTeX</h2>
+      <pre class="bg-neutral-900 text-neutral-100 p-4 rounded-2xl overflow-x-auto text-sm"><code>@article{qin2025unigaze,
+  title={UniGaze: Towards Universal Gaze Estimation via Large-scale Pre-Training},
+  author={Qin, Jiawei and Zhang, Xucong and Sugano, Yusuke},
+  journal={arXiv preprint arXiv:2502.02307},
+  year={2025}
+}</code></pre>
+    </section>
+
+    <!-- Contact -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-3">Contact</h2>
+      <p class="text-neutral-800">If you have any questions, feel free to contact <strong>Jiawei Qin</strong> at <a class="underline" href="mailto:jqin@iis.u-tokyo.ac.jp">jqin@iis.u-tokyo.ac.jp</a>.</p>
+    </section>
+  </main>
+
+  <footer class="py-10 text-center text-neutral-500 text-sm">
+    © 2025 UniGaze.
+  </footer>
+</body>
+</html>
