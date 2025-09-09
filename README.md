@@ -101,7 +101,7 @@ python predict_gaze_video.py \
 
 ---
 
-# Citation
+## Citation
 If you find our work useful for your research, please consider citing:
 
 ```
@@ -128,5 +128,10 @@ A comprehensive introduction to the ModelGo license can be found here: https://w
 
 ---
 
+## Beyond human eye gaze estimation:
+Our method also works for different "faces"
+
+<img src="./gaze_cat_dog.png" width="800" alt="grid"/>
+---
 ## Contact
 If you have any questions, feel free to contact Jiawei Qin at jqin@iis.u-tokyo.ac.jp.
