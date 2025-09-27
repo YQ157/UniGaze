@@ -101,7 +101,7 @@ def load_checkpoint(model, ckpt_key, ckpt_path):
 class UniGazeRuntime:
     def __init__(self, cfg_path: str, ckpt_path: str, device: str = "cpu"):
         self.device = torch.device(device)
-        torch.set_grad_enabled(False)
+        # torch.set_grad_enabled(False)
         set_seed(42)
 
         pretrained_model_cfg = OmegaConf.load(cfg_path)["net_config"]
